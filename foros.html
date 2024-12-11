@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/detalleforo.css">
     <title>Foro de Discusión - Plataforma de Competencias Digitales</title>
     <style>
-        /* Contenedor principal del foro */
         .forum-container {
             max-width: 1200px;
             margin: 20px auto;
@@ -20,7 +19,6 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Encabezado del foro */
         .forum-header {
             display: flex;
             justify-content: space-between;
@@ -30,7 +28,6 @@
             padding-bottom: 10px;
         }
 
-        /* Título del foro */
         .forum-header h1 {
             font-size: 28px;
             font-weight: bold;
@@ -38,7 +35,6 @@
             margin: 0;
         }
 
-        /* Botón para crear nuevo tema */
         .create-topic {
             background-color: #ff8800;
             color: white;
@@ -54,7 +50,6 @@
             background-color: #d06e00;
         }
 
-        /* Estilo para el formulario de crear foro */
         #crear-foro {
             background: white;
             padding: 20px;
@@ -114,7 +109,6 @@
             padding: 0;
         }
 
-        /* Estilo para cada tema */
         .topic-item {
             padding: 15px;
             border-bottom: 1px solid #ddd;
@@ -124,20 +118,17 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        /* Título de cada tema */
         .topic-item h2 {
             font-size: 20px;
             margin: 0;
             color: #007bff;
         }
 
-        /* Descripción de cada tema */
         .topic-item p {
             margin: 5px 0;
             color: #666;
         }
 
-        /* Enlace del tema */
         .topic-item a {
             color: #ff8800;
             text-decoration: none;
@@ -147,14 +138,12 @@
             text-decoration: underline;
         }
 
-        /* Estilo para las respuestas */
         .respuestas {
             margin-top: 40px;
             padding: 20px;
             border-top: 2px solid #ddd;
         }
 
-        /* Estilo para cada respuesta */
         .respuesta {
             background-color: #f9f9f9;
             border: 1px solid #e0e0e0;
@@ -164,13 +153,11 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        /* Estilo para el nombre de usuario del autor */
         .respuesta p strong {
             font-size: 16px;
             color: #007bff;
         }
 
-        /* Estilo para el contenido de la respuesta */
         .respuesta p {
             font-size: 14px;
             line-height: 1.6;
@@ -178,7 +165,6 @@
             color: #333;
         }
 
-        /* Estilo para la fecha de creación de la respuesta */
         .respuesta small {
             display: block;
             margin-top: 10px;
@@ -215,7 +201,7 @@
         </div>
 
         <div id="forum-list">
-            <!-- Aquí se listarán los foros -->
+
         </div>
 
         <div id="forum-detail" style="display: none;">
@@ -224,7 +210,7 @@
 
             <h3>Respuestas:</h3>
             <div id="respuestas">
-                <!-- Aquí se mostrarán las respuestas -->
+
             </div>
 
             <h3>Responde al foro:</h3>
