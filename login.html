@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/estiloHeader.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>Login</title>
+</head>
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="img/comingsoon.png" alt="Logo"></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="contacto.html"><i class="fas fa-phone"></i> Contacto</a></li>
+            <li><a href="#"><i class="fas fa-check-square"></i> Proximamente</a></li>
+            <li><a href="foros.html"><i class="fas fa-comments"></i> Foro</a></li>
+        </ul>
+    </nav>
+    <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-user"></i> Cuenta</button>
+        <div class="dropdown-content">
+            <a href="login.html">Iniciar Sesión</a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="mainLogin">
+        <div class="support-section">
+        </div>
+
+        <h1>NombreEmpresa</h1>
+        <h2>Iniciar sesión</h2>
+        <form id="Formulario" method="POST">
+
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="hidden" name="csrf_token" value="TOKEN_AQUI">
+
+            <input value="Iniciar Sesión" type="submit">
+        </form>
+        <p>¿Aún no tienes cuenta? <a href="register.html">¡Regístrate ya!</a></p>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,53 @@
+
+body {
+    height: 100%; /* Asegura que el body ocupe toda la altura de la ventana */
+    margin: 0; /* Elimina márgenes predeterminados */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Esto asegura que el contenido y el footer estén distribuidos */
+}
+
+/* Contenedor principal */
+.wrapper {
+    flex-grow: 1; /* Permite que el contenido ocupe el espacio restante */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-info {
+    text-align: center;
+}
+
+.footer-info p {
+    margin-bottom: 15px;
+}
+
+.footer-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-info ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-info ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-info ul li a:hover {
+    text-decoration: underline;
+}

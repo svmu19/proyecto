@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/estiloHeader.css">
+    <link rel="stylesheet" href="css/detalleforo.css">
+    <title>Foro de Discusión - Plataforma de Competencias Digitales</title>
+    <style>
+        /* Contenedor principal del foro */
+        .forum-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Encabezado del foro */
+        .forum-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ff8800;
+            padding-bottom: 10px;
+        }
+
+        /* Título del foro */
+        .forum-header h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+
+        /* Botón para crear nuevo tema */
+        .create-topic {
+            background-color: #ff8800;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .create-topic:hover {
+            background-color: #d06e00;
+        }
+
+        /* Estilo para el formulario de crear foro */
+        #crear-foro {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        #crear-foro h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        #crear-foro form input,
+        #crear-foro form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        #crear-foro form button {
+            background-color: #ff8800;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #crear-foro form button:hover {
+            background-color: #d06e00;
+        }
+
+        #crear-foro button {
+            background-color: #ff8800;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        #crear-foro button:hover {
+            background-color: #d06e00;
+        }
+
+        /* Listado de temas del foro */
+        .topic-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Estilo para cada tema */
+        .topic-item {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Título de cada tema */
+        .topic-item h2 {
+            font-size: 20px;
+            margin: 0;
+            color: #007bff;
+        }
+
+        /* Descripción de cada tema */
+        .topic-item p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        /* Enlace del tema */
+        .topic-item a {
+            color: #ff8800;
+            text-decoration: none;
+        }
+
+        .topic-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo para las respuestas */
+        .respuestas {
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        /* Estilo para cada respuesta */
+        .respuesta {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para el nombre de usuario del autor */
+        .respuesta p strong {
+            font-size: 16px;
+            color: #007bff;
+        }
+
+        /* Estilo para el contenido de la respuesta */
+        .respuesta p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        /* Estilo para la fecha de creación de la respuesta */
+        .respuesta small {
+            display: block;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="img/comingsoon.png" alt="Logo"></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="contacto.html"><i class="fas fa-phone"></i> Contacto</a></li>
+            <li><a href="#"><i class="fas fa-check-square"></i> Proximamente</a></li>
+            <li><a href="foros.html"><i class="fas fa-comments"></i> Foro</a></li>
+        </ul>
+    </nav>
+    <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-user"></i> Cuenta</button>
+        <div class="dropdown-content">
+            <a href="login.html">Iniciar Sesión</a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <main class="forum-container">
+        <div class="forum-header">
+            <h1>Foro de Discusión</h1>
+            <button class="create-topic" onclick="mostrarFormularioCrear()">Crear Nuevo Tema</button>
+        </div>
+
+        <div id="forum-list">
+            <!-- Aquí se listarán los foros -->
+        </div>
+
+        <div id="forum-detail" style="display: none;">
+            <h2 id="foro-titulo"></h2>
+            <p id="foro-descripcion"></p>
+
+            <h3>Respuestas:</h3>
+            <div id="respuestas">
+                <!-- Aquí se mostrarán las respuestas -->
+            </div>
+
+            <h3>Responde al foro:</h3>
+            <form id="respuesta-form" onsubmit="agregarRespuesta(event)">
+                <textarea id="respuesta-contenido" placeholder="Escribe tu respuesta..." required></textarea>
+                <button type="submit">Responder</button>
+            </form>
+            <button onclick="mostrarListaForos()">Volver a la lista de foros</button>
+        </div>
+
+        <div id="crear-foro" style="display: none;">
+            <h2>Crear Nuevo Foro</h2>
+            <form id="crear-foro-form" onsubmit="crearForo(event)">
+                <input id="foro-titulo-input" type="text" placeholder="Título del foro" required>
+                <textarea id="foro-descripcion-input" placeholder="Descripción del foro" required></textarea>
+                <button type="submit">Crear Foro</button>
+            </form>
+            <button onclick="mostrarListaForos()">Volver a la lista de foros</button>
+        </div>
+    </main>
+
+    <script>
+        const foros = [];
+
+        function mostrarFormularioCrear() {
+            document.getElementById('forum-list').style.display = 'none';
+            document.getElementById('forum-detail').style.display = 'none';
+            document.getElementById('crear-foro').style.display = 'block';
+        }
+
+        function mostrarListaForos() {
+            document.getElementById('forum-list').style.display = 'block';
+            document.getElementById('forum-detail').style.display = 'none';
+            document.getElementById('crear-foro').style.display = 'none';
+            actualizarListaForos();
+        }
+
+        function mostrarForo(foroId) {
+            const foro = foros[foroId];
+            document.getElementById('foro-titulo').innerText = foro.titulo;
+            document.getElementById('foro-descripcion').innerText = foro.descripcion;
+
+            const respuestasDiv = document.getElementById('respuestas');
+            respuestasDiv.innerHTML = '';
+
+            foro.respuestas.forEach((respuesta, index) => {
+                const respuestaDiv = document.createElement('div');
+                respuestaDiv.classList.add('respuesta');
+                respuestaDiv.innerHTML = `<p><strong>Usuario ${index + 1}</strong> dijo:</p><p>${respuesta}</p>`;
+                respuestasDiv.appendChild(respuestaDiv);
+            });
+
+            document.getElementById('forum-list').style.display = 'none';
+            document.getElementById('crear-foro').style.display = 'none';
+            document.getElementById('forum-detail').style.display = 'block';
+
+            document.getElementById('respuesta-form').setAttribute('data-foro-id', foroId);
+        }
+
+        function actualizarListaForos() {
+            const forumList = document.getElementById('forum-list');
+            forumList.innerHTML = '';
+
+            foros.forEach((foro, index) => {
+                const foroDiv = document.createElement('div');
+                foroDiv.classList.add('topic-item');
+                foroDiv.innerHTML = `<h2><a href="#" onclick="mostrarForo(${index})">${foro.titulo}</a></h2><p>${foro.descripcion}</p>`;
+                forumList.appendChild(foroDiv);
+            });
+        }
+
+        function crearForo(event) {
+            event.preventDefault();
+
+            const titulo = document.getElementById('foro-titulo-input').value;
+            const descripcion = document.getElementById('foro-descripcion-input').value;
+
+            foros.push({
+                titulo,
+                descripcion,
+                respuestas: []
+            });
+
+            mostrarListaForos();
+        }
+
+        function agregarRespuesta(event) {
+            event.preventDefault();
+
+            const foroId = event.target.getAttribute('data-foro-id');
+            const contenido = document.getElementById('respuesta-contenido').value;
+
+            foros[foroId].respuestas.push(contenido);
+            mostrarForo(foroId);
+        }
+
+        // Inicialización
+        mostrarListaForos();
+    </script>
+</body>
+
+</html>

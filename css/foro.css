@@ -1,0 +1,164 @@
+/* Contenedor principal del foro */
+.forum-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado del foro */
+.forum-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ff8800;
+    padding-bottom: 10px;
+}
+
+/* Título del foro */
+.forum-header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* Botón para crear nuevo tema */
+.create-topic {
+    background-color: #ff8800;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.create-topic:hover {
+    background-color: #d06e00;
+}
+
+/* Listado de temas del foro */
+.topic-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo para cada tema */
+.topic-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de cada tema */
+.topic-item h2 {
+    font-size: 20px;
+    margin: 0;
+    color: #007bff;
+}
+
+/* Descripción de cada tema */
+.topic-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Enlace del tema */
+.topic-item a {
+    color: #ff8800;
+    text-decoration: none;
+}
+
+.topic-item a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para las respuestas */
+.respuestas {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 2px solid #ddd;
+}
+
+/* Estilo para cada respuesta */
+.respuesta {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el nombre de usuario del autor */
+.respuesta p strong {
+    font-size: 16px;
+    color: #007bff;
+}
+
+/* Estilo para el contenido de la respuesta */
+.respuesta p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Estilo para la fecha de creación de la respuesta */
+.respuesta small {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Estilo del formulario para responder */
+form {
+    margin-top: 40px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Botón de enviar respuesta */
+form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Estilo del título del foro cuando se ve el foro específico */
+.forum-detail h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* Descripción del foro específico */
+.forum-detail p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}

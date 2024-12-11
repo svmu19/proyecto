@@ -1,0 +1,50 @@
+.contact-section {
+    text-align: center;
+    padding: 50px;
+    margin: 0 auto; /* Centra la sección en la página */
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #313131;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    max-width: 800px; /* Limita el ancho del párrafo */
+    margin-left: auto; /* Centra el párrafo */
+    margin-right: auto; /* Centra el párrafo */
+}
+
+.contact-icons a {
+    margin: 0 15px;
+    font-size: 2rem;
+    color: #333; /* Color normal */
+    text-decoration: none;
+}
+
+.contact-icons a:hover {
+    color: #d06e00; /* Color al pasar el cursor */
+}
+
+.contact-details {
+    font-size: 1.2rem;
+    color: #495057;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-size: 19px;
+    margin-bottom: 25px;
+    max-width: 800px; /* Limita el ancho de la descripción */
+    margin-left: auto; /* Centra la descripción */
+    margin-right: auto; /* Centra la descripción */
+}
